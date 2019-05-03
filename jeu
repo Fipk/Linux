@@ -1,0 +1,18 @@
+#!/bin/bash
+
+nombre=0
+nbtentative=0
+aleatoire=$RANDOM
+
+while [ $nombre -ne $aleatoire ] ; do
+	echo -n "Devinez? " ; read nombre
+	if [ $nombre -lt $aleatoire ] ; then
+		echo "... cest plus grand!"
+	elif [ $nombre -gt $aleatoire ] ; then
+		echo "... c'est plus petit!"
+	fi
+	nbtentative=$(( $nbtentative + 1 ))
+	done
+
+echo "Bravo!! Vous avez deviné $aleatoire en $nbtentative coups"
+exit 0

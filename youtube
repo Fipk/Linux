@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+url=""
+
+echo -p "Entrez l'url de la vidéo" ; read url
+youtube-dl -x url
